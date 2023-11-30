@@ -1,21 +1,22 @@
 package model.entities;
 
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.util.Date;
 import java.util.Objects;
 
 public class Seller implements Serializable {
     private Integer id;
     private String name;
     private String email;
-    private LocalDate birthDate;
     private Double baseSalary;
+    private Date birthDate;
+
 
     private Department department;
 
     public Seller() {}
 
-    public Seller(Integer id, String name, String email, LocalDate birthDate, Double baseSalary, Department department) {
+    public Seller(Integer id, String name, String email, Double baseSalary, Date birthDate, Department department) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -48,11 +49,11 @@ public class Seller implements Serializable {
         this.email = email;
     }
 
-    public LocalDate getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -87,12 +88,12 @@ public class Seller implements Serializable {
 
     @Override
     public String toString() {
-        return "Seller | " +
+        return "Seller [ " +
                 "ID = " + id +
                 " | Name = " + name +
                 " | Email = " + email +
                 " | Birth Date = " + birthDate +
                 " | Base salary = " + baseSalary +
-                " | Department = " + department;
+                " | " + department + " ]";
     }
 }

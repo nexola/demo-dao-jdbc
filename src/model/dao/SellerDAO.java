@@ -8,6 +8,6 @@ public interface SellerDAO {
     void insert(Seller department);
     void update(Seller department);
     void deleteById(Integer id);
-    void findById(Integer id);
+    Seller findById(Integer id);
     List<Seller> findAll();
 }
