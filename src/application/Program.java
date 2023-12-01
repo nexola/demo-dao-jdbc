@@ -7,10 +7,12 @@ import model.entities.Seller;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class Program {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
         SellerDAO sellerDAO = DaoFactory.createSellerDao();
 
@@ -38,10 +40,17 @@ public class Program {
 //        sellerDAO.insert(vendedor);
         System.out.println("Inserido! Novo ID = " + vendedor.getId());
 
-        System.out.println("=== TEST 5: seller insert ===");
+        System.out.println("=== TEST 5: seller update ===");
         vendedor = sellerDAO.findById(1);
         vendedor.setName("Julio Donofreo");
 //        sellerDAO.update(vendedor);
         System.out.println("Update concluído!");
+
+        System.out.println("=== TEST 6: seller delete ===");
+        System.out.print("Entre com o ID para exclusão: ");
+        int id = sc.nextInt();
+        sellerDAO.deleteById(id);
+        System.out.println("Exclusão do id: " + id + " Concluída!");
+        sc.close();
     }
 }
