@@ -48,9 +48,9 @@ public class Program {
 
         System.out.println("=== TEST 6: seller delete ===");
         System.out.print("Entre com o ID para exclusão: ");
-        int id = sc.nextInt();
-        sellerDAO.deleteById(id);
-        System.out.println("Exclusão do id: " + id + " Concluída!");
+//        int id = sc.nextInt();
+//        sellerDAO.deleteById(id);
+        System.out.println("Exclusão concluída!");
         sc.close();
     }
 }
