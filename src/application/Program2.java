@@ -18,6 +18,8 @@ public class Program2 {
         DepartmentDAO departmentDAO = DaoFactory.createDepartmentDao();
 
         System.out.println("=== TEST 1: department findById ===");
+        department = departmentDAO.findById(3);
+        System.out.println(department);
 
         System.out.println();
 
