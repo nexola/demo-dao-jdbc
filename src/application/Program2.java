@@ -23,22 +23,22 @@ public class Program2 {
 
         System.out.println();
 
-        System.out.println("=== TEST 2: department findByDepartment ===");
+        System.out.println("=== TEST 2: department findAll ===");
+        List<Department> departments = departmentDAO.findAll();
+        for (Department departamento : departments) {
+            System.out.println(departamento);
+        }
 
         System.out.println();
 
-        System.out.println("=== TEST 3: department findAll ===");
-
-        System.out.println();
-
-        System.out.println("=== TEST 4: department insert ===");
+        System.out.println("=== TEST 3: department insert ===");
         department = new Department(null, "Jóias");
 //        departmentDAO.insert(department);
         System.out.println("Inserção concluída, novo ID = " + department.getId());
 
         System.out.println();
 
-        System.out.println("=== TEST 5: department update ===");
+        System.out.println("=== TEST 4: department update ===");
         department = new Department(6, null);
         department.setName("Cars");
 //        departmentDAO.update(department);
@@ -46,7 +46,7 @@ public class Program2 {
 
         System.out.println();
 
-        System.out.println("=== TEST 6: department delete ===");
+        System.out.println("=== TEST 5: department delete ===");
         System.out.print("Insira o ID para exclusão: ");
 //        int id = sc.nextInt();
 //        departmentDAO.deleteById(id);
